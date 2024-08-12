@@ -29,19 +29,30 @@ order(2000, () => console.log(`${stocks.Fruits[0]} was selected`))
     return order(2000, () => console.log("The Fruit was Chopped"));
   })
   .then(() => {
-    return order(1000, () => console.log(`${stocks.Liquids[0]} and ${stocks.Liquids[1]} was added`));
+    return order(1000, () =>
+      console.log(`${stocks.Liquids[0]} and ${stocks.Liquids[1]} was added`)
+    );
   })
   .then(() => {
     return order(1000, () => console.log("Start The Machine"));
   })
   .then(() => {
-    return order(2000, () => console.log(`iceCream placed on ${stocks.holder[0]}`));
+    return order(2000, () =>
+      console.log(`iceCream placed on ${stocks.holder[0]}`)
+    );
   })
   .then(() => {
-    return order(3000, () => console.log(`${stocks.toppings[0]} was added as toppings`));
+    return order(3000, () =>
+      console.log(`${stocks.toppings[0]} was added as toppings`)
+    );
   })
   .then(() => {
     return order(2000, () => console.log("Serve IceCream"));
   })
-  .catch(() => {console.log("Customer Left");
+  .catch(() => {
+    console.log("Customer Left");
   })
+
+  .finally(() => {
+    console.log("Day Ended, Shop Is Closed");
+  });
